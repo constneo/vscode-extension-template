@@ -1,0 +1,106 @@
+{
+  "name": "vscode-extension-template",
+  "displayName": "Extension Template",
+  "version": "0.1.0",
+  "publisher": "YOUR",
+  "description": "Extension Template.",
+  "type": "module",
+  "author": "YOUR",
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "assets/icon.dark.png",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "main": "extension.cjs",
+  "activationEvents": [
+    "onStartupFinished",
+    "onLanguage:md"
+  ],
+  "scripts": {
+    "build": "vsce package --no-dependencies",
+    "build:dep": "vsce package --dependencies"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR"
+  },
+  "homepage": "https://github.com/YOUR",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/default.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "markdown",
+        "aliases": [
+          "markdown",
+          "md"
+        ],
+        "extensions": [
+          ".md"
+        ],
+        "icon": {
+          "light": "assets/icon.light.png",
+          "dark": "assets/icon.dark.png"
+        }
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "vscode-extension-template.hello",
+          "when": "resourceExtname == .md"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "vscode-extension-template.hello",
+          "when": "resourceExtname == .md"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "vscode-extension-template.hello",
+        "title": "Command Hello"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vscode-extension-template.hello",
+        "when": "resourceExtname == .md",
+        "key": "ctrl+alt+k"
+      }
+    ],
+    "configuration": {
+      "id": "vscode-extension-template",
+      "type": "object",
+      "order": 20,
+      "title": "Extension Template",
+      "properties": {
+        "vscode-extension-template.show": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show welcome message."
+        },
+        "vscode-extension-template.input": {
+          "type": "string",
+          "default": "Hello,vscode.",
+          "description": "`vscode-extension-template.show` message."
+        }
+      }
+    }
+  },
+  "dependencies": {},
+  "extensionDependencies": [],
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/vscode": "^1.98.0"
+  }
+}

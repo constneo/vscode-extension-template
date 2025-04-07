@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "svg.preview.background": "white"
+  // "files.saveConflictResolution": "overwriteFileOnDisk"
+}

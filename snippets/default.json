@@ -1,0 +1,8 @@
+{
+  "Output a uuid string": {
+    "scope": ["markdown", "md"],
+    "prefix": ".uuid",
+    "body": ["$UUID"],
+    "description": "Generate a uuid string"
+  }
+}
