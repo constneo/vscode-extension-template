@@ -78,18 +78,17 @@ export function getRootDir(uri) {
 
 /**
  * 右下角的欢迎语
- * @return {void}
+ * @return {vscode.Disposable}
  */
 export function welcome() {
   console.log(`Register ${EXNTENSION_ID} extension .`)
 
-  const { show } = getConfig()
-
-  if (show) {
+  const disposable = new vscode.Disposable(() => {
     vscode.window.showInformationMessage(message)
-  }
-}
+  })
 
+  return disposable
+}
 /**
  * 获取当前日期
  * @returns {string}
@@ -112,4 +111,18 @@ export function getCurrentDate() {
   const ss = date.getSeconds()
 
   return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+}
+
+/**
+ * 自定义 when 子句上下文
+ *
+ * @returns {vscode.Disposable}
+ */
+export function when() {
+  // 监听配置文件的修改,使条件立即生效
+  const disposable = vscode.workspace.onDidChangeConfiguration(async config => {
+    vscode.commands.executeCommand("setContext", "constneo.testSetContext", true)
+  })
+
+  return disposable
 }

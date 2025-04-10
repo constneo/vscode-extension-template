@@ -10,6 +10,11 @@
 }
 ```
 
+## i10n
+
+- package.nls.zh-cn.json
+- package.nls.json
+
 ## Build
 
 ```shell

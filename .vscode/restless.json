@@ -1,0 +1,18 @@
+[
+  {
+    "contextValue": "call",
+    "identifier": "Demo83F6B3",
+    "label": "Demo",
+    "url": "",
+    "method": "GET",
+    "auth": "",
+    "headers": [
+      {
+        "header": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "body": "",
+    "bustCache": true
+  }
+]

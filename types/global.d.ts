@@ -17,3 +17,10 @@ declare global {
     input: string
   }
 }
+
+declare module "#vscode" {
+  import vscode = require("vscode")
+  export default vscode
+}
+
+export {}

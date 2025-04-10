@@ -26,8 +26,12 @@ export const Config = {
   input: ""
 }
 
-// 插件启动后的欢迎语
+/**
+ * 插件启动后的欢迎语
+ */
 export const message = `Thank you for using ${DISPLAY_NAME}`
 
-// 文件选择 glob
+/**
+ * 文件选择 glob
+ */
 export const selector = [{ scheme: "file", language: "markdown", pattern: "**/*.md" }]

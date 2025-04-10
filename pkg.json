@@ -1,4 +1,21 @@
 {
+  "id": "YOUR.vscode-extension-template",
+  "identifier": {
+    "value": "YOUR.vscode-extension-template",
+    "_lower": "your.vscode-extension-template"
+  },
+  "isBuiltin": false,
+  "isUserBuiltin": false,
+  "isUnderDevelopment": true,
+  "extensionLocation": {
+    "$mid": 1,
+    "fsPath": "e:\\code\\vscode\\ex-template",
+    "_sep": 1,
+    "path": "/e:/code/vscode/ex-template",
+    "scheme": "file"
+  },
+  "targetPlatform": "undefined",
+  "preRelease": false,
   "name": "vscode-extension-template",
   "displayName": "Extension Template",
   "version": "0.1.0",
@@ -6,74 +23,40 @@
   "description": "Extension Template.",
   "type": "module",
   "author": "YOUR",
-  "categories": [
-    "Programming Languages"
-  ],
+  "categories": ["Programming Languages"],
   "icon": "assets/icon.dark.png",
-  "engines": {
-    "vscode": "^1.98.0"
-  },
+  "engines": { "vscode": "^1.98.0" },
   "main": "extension.cjs",
-  "activationEvents": [
-    "onStartupFinished",
-    "onLanguage:md"
-  ],
+  "activationEvents": ["onStartupFinished", "onLanguage:md"],
   "scripts": {
     "build": "vsce package --no-dependencies",
     "build:dep": "vsce package --dependencies"
   },
-  "license": "LICENSE",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/YOUR"
-  },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/YOUR" },
   "homepage": "https://github.com/YOUR",
   "contributes": {
-    "snippets": [
-      {
-        "language": "markdown",
-        "path": "./snippets/default.json"
-      }
-    ],
+    "snippets": [{ "language": "markdown", "path": "./snippets/default.json" }],
     "languages": [
       {
         "id": "markdown",
-        "aliases": [
-          "markdown",
-          "md"
-        ],
-        "extensions": [
-          ".md"
-        ],
-        "icon": {
-          "light": "assets/icon.light.png",
-          "dark": "assets/icon.dark.png"
-        }
+        "aliases": ["markdown", "md"],
+        "extensions": [".md"],
+        "icon": { "light": "assets/icon.light.png", "dark": "assets/icon.dark.png" }
       }
     ],
     "menus": {
       "commandPalette": [
-        {
-          "command": "vscode-extension-template.hello",
-          "when": "resourceExtname == .md"
-        }
+        { "command": "vscode-extension-template.hello", "when": "resourceExtname == .md" }
       ],
       "editor/context": [
-        {
-          "command": "vscode-extension-template.hello",
-          "when": "resourceExtname == .md"
-        }
+        { "command": "vscode-extension-template.hello", "when": "resourceExtname == .md" }
       ]
     },
     "commands": [
       {
         "command": "vscode-extension-template.hello",
-        "title": "%vscode-extension-template.hello.title%",
-        "category": "Ex",
-        "icon": {
-          "light": "resources/icon.svg",
-          "dark": "resources/icon.svg"
-        }
+        "title": { "value": "命令:Hello", "original": "Command:Hello" }
       }
     ],
     "keybindings": [
@@ -97,19 +80,12 @@
         "vscode-extension-template.input": {
           "type": "string",
           "default": "Hello,vscode.",
-          "description": "`vscode-extension-template.show` message.",
-          "markdownDescription": "`setting(vscode-extension-template.show)` message."
+          "description": "`vscode-extension-template.show` message."
         }
       }
     }
   },
-  "imports": {
-    "#vscode": "./src/vscode.js"
-  },
   "dependencies": {},
   "extensionDependencies": [],
-  "devDependencies": {
-    "@types/node": "^22.13.14",
-    "@types/vscode": "^1.98.0"
-  }
+  "devDependencies": { "@types/node": "^22.13.14", "@types/vscode": "^1.98.0" }
 }
