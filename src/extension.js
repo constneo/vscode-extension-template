@@ -2,6 +2,7 @@ import onCommand from "./provider.js"
 import { getConfig, getExtensionJson } from "./utils.js"
 import vscode from "./vscode.js"
 import statusbar from "./statusbar.js"
+import { welcome } from "./welcome.js"
 
 const cmd = onCommand()
 
