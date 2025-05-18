@@ -7,3 +7,5 @@
   --outfile=out.js
   # --minify
 )
+
+vsce package --no-dependencies

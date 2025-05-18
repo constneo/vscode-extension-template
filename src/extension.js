@@ -1,5 +1,5 @@
 import onCommand from "./provider.js"
-import { getConfig, getExtensionJson, welcome } from "./utils.js"
+import { getConfig, getExtensionJson } from "./utils.js"
 import vscode from "./vscode.js"
 import statusbar from "./statusbar.js"
 

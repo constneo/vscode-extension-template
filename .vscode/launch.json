@@ -15,6 +15,7 @@
         "--disable-extensions",
         "${workspaceRoot}/test"
       ],
+      "skipFiles": ["<node_internals>/**", "${workspaceFolder}/node_modules/**"],
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
       "env": {
         // "PLUGIN_NAME": "HELLO WORLD"
